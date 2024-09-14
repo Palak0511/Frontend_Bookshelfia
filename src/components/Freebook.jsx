@@ -11,7 +11,7 @@ function Freebook() {
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/api/book");
+        const res = await axios.get("https://backend-bookshelfia-rasp.onrender.com/api/book");
         const data = res.data.filter((data) => data.category === "Free");
         setBook(data);
       } catch (error) {
